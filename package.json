@@ -1,0 +1,21 @@
+{
+  "name": "api-node",
+  "version": "1.0.0",
+  "description": "Esta es una prueba de una API REST en Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "C:/Users/Admin/Desktop/api-node/.git/"
+  },
+  "author": "Set Jafet",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.10.4"
+  }
+}
