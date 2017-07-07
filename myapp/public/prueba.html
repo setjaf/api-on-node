@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="/stylesheets/style.css">
+	<link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body>
 <div class="">
@@ -22,21 +22,31 @@
 			<p class="col l8 s12 m10 center offset-l2 offset-m1">
 		      <input name="group1" type="radio" id="test1" class="with-gap"/>
 		      <label for="test1">Neto</label>
-		      <input name="group1" type="radio" id="test2" class="with-gap"/>
+		      <input name="group1" type="radio" id="test2" class="with-gap" selected/>
 		      <label for="test2">Caja</label>
-		  </p>
+		    </p>
 
-      <div class="input-field col s8 m4 offset-m3">
-        <input id="first_name" type=number class="validate">
-        <label for="first_name">Peso</label>
-      </div>
-      <div class="col s4 m2">
-      	<a class="btn-floating waves-effect waves-light red"><i class="material-icons">expand_less</i></a>
-				<a class="btn-floating waves-effect waves-light red"><i class="material-icons">expand_more</i></a>
-      </div>
+			<div class="input-field col s4 m3 offset-m3">
+				<input id="peso" type=number class="validate" placeholder="0" value="0">
+				<label for="first_name">Peso (kg)</label>
+			</div>
+
+			<div class="input-field col s4 m1">
+				<select class="multiple" id="incremento">
+				  <option value="1" selected>1 Kg</option>
+				  <option value="10">10 Kg</option>
+				  <option value="100">100 Kg</option>
+				</select>
+				<label>Incremento:</label>
+			</div>
+
+			<div class="col s4 m2">
+				<a class="btn-floating waves-effect waves-light red" id="aumento"><i class="material-icons">expand_less</i></a>
+				<a class="btn-floating waves-effect waves-light red" id="decremento"><i class="material-icons">expand_more</i></a>
+			</div>
 
 			<div class="input-field col s12 m6 offset-m3">
-				<select class="multiple">
+				<select class="multiple" id="calidad">
 				  <option value="" selected>Elije una calidad...</option>
 				  <option value="1">Calidad 1</option>
 				  <option value="2">Calidad 2</option>
@@ -46,7 +56,7 @@
 			</div>
 
 			<div class="input-field col s8 m4 offset-m3">
-				<select class="multiple">
+				<select class="multiple" id="productor">
 				  <option value="" selected>Elije un productor...</option>
 				  <option value="1">Productor 1</option>
 				  <option value="2">Productor 2</option>
@@ -56,12 +66,12 @@
 			</div>
 
 			<div class="col s4 m2">
-				<a class="btn-floating waves-effect waves-light red"><i class="material-icons">add</i></a>
-      </div>
+				<a class="btn-floating waves-effect waves-light red" id="agreProd"><i class="material-icons" title="Agregar un nuevo productor">add</i></a>
+      		</div>
 
 			<div class="col s12 m6 offset-m3">
-				<button class="btn waves-effect waves-light light-green" type="submit" name="action">
-					Submit
+				<button class="btn waves-effect waves-light light-green" type="button" name="action" title="Enviar"> 
+					Enviar
 					<i class="material-icons right">send</i>
 				</button>
 			</div>
@@ -69,13 +79,7 @@
 	</section>
 </div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script  type="text/javascript" >
-
-		$(document).ready(function() {
-    		$('select').material_select();
-  		});
-
-	</script>
+	<script type="text/javascript" src="./js/funtions.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 </body>
 </html>
